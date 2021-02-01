@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>VScode C语言环境配置 | Nefelibata&#39;s blog</title>
+  <title>leetcode刷题笔记01.两数之和 | Nefelibata&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="VS Code 中 C&#x2F;C++  环境的手动配置（以Windows为例）菜鸡第一次比较正式的技术博客，看个热闹，求轻喷。 ​                                                                                                配置前准备 VS Code对应版本  MSYS-64 - RT的安装包   关于以上">
+  <meta name="description" content="题目1，两数之和题目： 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。你可以按任意顺序返回答案。 题解： 123456789101112131415161718192021int* twoSum(int* nums, int numsSize">
 <meta property="og:type" content="article">
-<meta property="og:title" content="VScode C语言环境配置">
-<meta property="og:url" content="http://example.com/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
+<meta property="og:title" content="leetcode刷题笔记01.两数之和">
+<meta property="og:url" content="http://example.com/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/index.html">
 <meta property="og:site_name" content="Nefelibata&#39;s blog">
-<meta property="og:description" content="VS Code 中 C&#x2F;C++  环境的手动配置（以Windows为例）菜鸡第一次比较正式的技术博客，看个热闹，求轻喷。 ​                                                                                                配置前准备 VS Code对应版本  MSYS-64 - RT的安装包   关于以上">
+<meta property="og:description" content="题目1，两数之和题目： 给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。你可以按任意顺序返回答案。 题解： 123456789101112131415161718192021int* twoSum(int* nums, int numsSize">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-25T02:25:29.000Z">
-<meta property="article:modified_time" content="2021-01-25T02:28:44.966Z">
+<meta property="article:published_time" content="2021-02-01T02:43:31.000Z">
+<meta property="article:modified_time" content="2021-02-01T02:50:33.999Z">
 <meta property="article:author" content="Nefelibata.W">
-<meta property="article:tag" content="技术博客">
+<meta property="article:tag" content="LeetCode笔记">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Nefelibata&#39;s blog" type="application/atom+xml">
@@ -153,65 +153,31 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-VScode-C语言环境配置" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-leetcode刷题笔记01-两数之和" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      VScode C语言环境配置
+      leetcode刷题笔记01.两数之和
     </h1>
   
 
         
-        <a href="/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-01-25T02:25:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-25</time>
+        <a href="/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="archive-article-date">
+  	<time datetime="2021-02-01T02:43:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="VS-Code-中-C-C-环境的手动配置（以Windows为例）"><a href="#VS-Code-中-C-C-环境的手动配置（以Windows为例）" class="headerlink" title="VS Code 中 C/C++  环境的手动配置（以Windows为例）"></a>VS Code 中 C/C++  环境的手动配置（以Windows为例）</h1><p><em>菜鸡第一次比较正式的技术博客，看个热闹，求轻喷。</em></p>
-<p>​                                                                                              </p>
-<hr>
-<h2 id="配置前准备"><a href="#配置前准备" class="headerlink" title="配置前准备"></a>配置前准备</h2><ul>
-<li><p>VS Code对应版本</p>
-</li>
-<li><p>MSYS-64 - RT的安装包</p>
-</li>
-</ul>
-<h3 id="关于以上内容的获取"><a href="#关于以上内容的获取" class="headerlink" title="关于以上内容的获取"></a>关于以上内容的获取</h3><ul>
-<li>搜索VS Code 官网下载对应版本</li>
-<li>关于MSYS-64 -RT的下载，详见 <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nRSN214F-NoXCD_sGiTP6Q"> 网盘资源 </a></li>
-</ul>
-<h2 id="开始配置"><a href="#开始配置" class="headerlink" title="开始配置"></a>开始配置</h2><ol>
-<li>打开VSC，在应用市场中下载扩展（<strong>C/C++</strong> ，<strong>C++intellisense</strong> ,    <strong>debugger for chrome</strong>   <strong>code runner</strong>必须配备)</li>
-<li>可以选装以下扩展：  beautify（美化界面） ， 简体中文（帮助阅读）等</li>
-<li>解压MSYS-64 -RT 安装包，并设置环境变量，关于环境变量中系统环境变量和用户环境变量的区别，详见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhwl/p/3338294.html">博客园-郑文亮的博客</a></li>
-<li>解压后，打开到bin目录后，将此路径添加到用户变量中（此设备右键—属性—高级系统设置—环境变量）</li>
-</ol>
-<h2 id="配置VSC"><a href="#配置VSC" class="headerlink" title="配置VSC"></a>配置VSC</h2><ol>
-<li>打开VSC，在扩展栏目中找到C/C++，点击旁边的齿轮图标选中扩展设置 ！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=320b5e6b3fe0312c8b85a8d2eed157eb">如图</a></li>
-<li>在扩展选项中找到 ！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=f0e234f7e1e7bfdbd2fd69c09136b9d3">如图</a></li>
-<li>在这个页面只需改动两个选项，compilerpath那一条改为可执行文件gcc.exe的绝对路径，具体方法是打开你解压好的MSYS文件夹一直找到bin目录后复制此时的路径粘贴到VSC，<strong>此时所有单斜杠处会显示红色报错，只需将单斜杠改为双斜杠</strong>，此方法通用于VSC</li>
-<li>下一步，需要改动<strong>includepath</strong>的数据，路径直接找到lib目录</li>
-<li>之后，按照！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=40745d96d48ae61f7f68d1f711c60b96">图片</a>  提示改动</li>
-<li>紧接着 ！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=0228cdc2f30f05bfc621b6fd78f13696">按照图片</a> ，改动，default includepath内部改动同第三条</li>
-<li>重启后即可配置成功</li>
-</ol>
-<h2 id="出现的include-lt-头文件-gt-出错"><a href="#出现的include-lt-头文件-gt-出错" class="headerlink" title="出现的include&lt;头文件&gt;出错"></a>出现的include&lt;头文件&gt;出错</h2><p>当出现<strong>检测到#include错误，请更新IncludePath</strong>这种报错时常用以下解决办法：</p>
-<ol>
-<li><p>启动命令命令提示符，键入<br><code>gcc -v -E -x c - </code>     <strong>注意空格！！</strong></p>
-</li>
-<li><p>获取mingw路径（四选一）</p>
-</li>
-<li><p>启动VSC，按  Shift+ctrl +p输入C++configurations，选择UI界面，打开后再包含路径处粘贴刚才的路径，退出重启VSC即可</p>
-</li>
-</ol>
-<h1 id="出现的汉字编译后为乱码现象"><a href="#出现的汉字编译后为乱码现象" class="headerlink" title="出现的汉字编译后为乱码现象"></a>出现的汉字编译后为乱码现象</h1><p>打开设置—-文本编辑器—-文件—-encoding，将其设置为gbk。</p>
-<p>​         </p>
+        <h2 id="题目1，两数之和"><a href="#题目1，两数之和" class="headerlink" title="题目1，两数之和"></a>题目1，两数之和</h2><p>题目：</p>
+<p><strong>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 的那 两个 整数，并返回它们的数组下标。你可以假设每种输入只会对应一个答案。但是，数组中同一个元素不能使用两遍。你可以按任意顺序返回答案。</strong></p>
+<p>题解：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">twoSum</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target, <span class="keyword">int</span>* returnSize)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    *returnSize=<span class="number">2</span>;</span><br><span class="line">    <span class="keyword">int</span> i,j;</span><br><span class="line">    <span class="keyword">int</span> *result=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span>(i=<span class="number">0</span>;i&lt;numsSize<span class="number">-1</span>;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">for</span>(j=i+<span class="number">1</span>;j&lt;numsSize;j++)</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="keyword">if</span>(nums[i]+nums[j]==target)</span><br><span class="line">            &#123;</span><br><span class="line">                 result=(<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)*<span class="number">2</span>);</span><br><span class="line">                 result[<span class="number">0</span>]=i;</span><br><span class="line">                 result[<span class="number">1</span>]=j;</span><br><span class="line">                 <span class="keyword">return</span> result;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">free</span>(result);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="解题思路："><a href="#解题思路：" class="headerlink" title="解题思路："></a>解题思路：</h3><p>暴力法，因为返回的数组值为两个，所以定义<code>*returnSize=2</code>，因为该函数返回值为动态数组，所以先令返回的结果指针（动态数组）为空，采用两级for循环，采用动态分配内存的方法分配动态数组，创建两个 <code>int*</code>形式的存储空间，并将变量i和j传入动态数组并返回。</p>
 
       
 
@@ -246,7 +212,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LeetCode笔记</a>
         		</li>
       		
 		</ul>
@@ -302,7 +268,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -316,18 +282,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          leetcode刷题笔记01.两数之和
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/01/24/first-test/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">first_test</div>
+    <a href="/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">VScode C语言环境配置</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -355,7 +312,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="VScode-C语言环境配置" data-title="VScode C语言环境配置" data-url="http://example.com/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"></div>
+	<div class="ds-thread" data-thread-key="leetcode刷题笔记01-两数之和" data-title="leetcode刷题笔记01.两数之和" data-url="http://example.com/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -377,7 +334,7 @@
   
 
   
-  <div id="SOHUCS" sid="VScode-C语言环境配置" ></div> 
+  <div id="SOHUCS" sid="leetcode刷题笔记01-两数之和" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({

@@ -6,19 +6,14 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>VScode C语言环境配置 | Nefelibata&#39;s blog</title>
+  <title>Tag: LeetCode笔记 | Nefelibata&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="VS Code 中 C&#x2F;C++  环境的手动配置（以Windows为例）菜鸡第一次比较正式的技术博客，看个热闹，求轻喷。 ​                                                                                                配置前准备 VS Code对应版本  MSYS-64 - RT的安装包   关于以上">
-<meta property="og:type" content="article">
-<meta property="og:title" content="VScode C语言环境配置">
-<meta property="og:url" content="http://example.com/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="Nefelibata&#39;s blog">
+<meta property="og:url" content="http://example.com/tags/LeetCode%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="Nefelibata&#39;s blog">
-<meta property="og:description" content="VS Code 中 C&#x2F;C++  环境的手动配置（以Windows为例）菜鸡第一次比较正式的技术博客，看个热闹，求轻喷。 ​                                                                                                配置前准备 VS Code对应版本  MSYS-64 - RT的安装包   关于以上">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2021-01-25T02:25:29.000Z">
-<meta property="article:modified_time" content="2021-01-25T02:28:44.966Z">
 <meta property="article:author" content="Nefelibata.W">
-<meta property="article:tag" content="技术博客">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Nefelibata&#39;s blog" type="application/atom+xml">
@@ -153,244 +148,60 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-VScode-C语言环境配置" class="article article-type-post " itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
+            
   
-    <h1 class="article-title" itemprop="name">
-      VScode C语言环境配置
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2021" class="archive-year">2021</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" class="archive-article-date">
+  	<time datetime="2021-02-01T02:43:31.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-01</time>
+</a>
+        </div>
+    	 
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/">leetcode刷题笔记01.两数之和</a>
     </h1>
   
 
-        
-        <a href="/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" class="archive-article-date">
-  	<time datetime="2021-01-25T02:25:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-01-25</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="VS-Code-中-C-C-环境的手动配置（以Windows为例）"><a href="#VS-Code-中-C-C-环境的手动配置（以Windows为例）" class="headerlink" title="VS Code 中 C/C++  环境的手动配置（以Windows为例）"></a>VS Code 中 C/C++  环境的手动配置（以Windows为例）</h1><p><em>菜鸡第一次比较正式的技术博客，看个热闹，求轻喷。</em></p>
-<p>​                                                                                              </p>
-<hr>
-<h2 id="配置前准备"><a href="#配置前准备" class="headerlink" title="配置前准备"></a>配置前准备</h2><ul>
-<li><p>VS Code对应版本</p>
-</li>
-<li><p>MSYS-64 - RT的安装包</p>
-</li>
-</ul>
-<h3 id="关于以上内容的获取"><a href="#关于以上内容的获取" class="headerlink" title="关于以上内容的获取"></a>关于以上内容的获取</h3><ul>
-<li>搜索VS Code 官网下载对应版本</li>
-<li>关于MSYS-64 -RT的下载，详见 <a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1nRSN214F-NoXCD_sGiTP6Q"> 网盘资源 </a></li>
-</ul>
-<h2 id="开始配置"><a href="#开始配置" class="headerlink" title="开始配置"></a>开始配置</h2><ol>
-<li>打开VSC，在应用市场中下载扩展（<strong>C/C++</strong> ，<strong>C++intellisense</strong> ,    <strong>debugger for chrome</strong>   <strong>code runner</strong>必须配备)</li>
-<li>可以选装以下扩展：  beautify（美化界面） ， 简体中文（帮助阅读）等</li>
-<li>解压MSYS-64 -RT 安装包，并设置环境变量，关于环境变量中系统环境变量和用户环境变量的区别，详见<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhwl/p/3338294.html">博客园-郑文亮的博客</a></li>
-<li>解压后，打开到bin目录后，将此路径添加到用户变量中（此设备右键—属性—高级系统设置—环境变量）</li>
-</ol>
-<h2 id="配置VSC"><a href="#配置VSC" class="headerlink" title="配置VSC"></a>配置VSC</h2><ol>
-<li>打开VSC，在扩展栏目中找到C/C++，点击旁边的齿轮图标选中扩展设置 ！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=320b5e6b3fe0312c8b85a8d2eed157eb">如图</a></li>
-<li>在扩展选项中找到 ！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=f0e234f7e1e7bfdbd2fd69c09136b9d3">如图</a></li>
-<li>在这个页面只需改动两个选项，compilerpath那一条改为可执行文件gcc.exe的绝对路径，具体方法是打开你解压好的MSYS文件夹一直找到bin目录后复制此时的路径粘贴到VSC，<strong>此时所有单斜杠处会显示红色报错，只需将单斜杠改为双斜杠</strong>，此方法通用于VSC</li>
-<li>下一步，需要改动<strong>includepath</strong>的数据，路径直接找到lib目录</li>
-<li>之后，按照！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=40745d96d48ae61f7f68d1f711c60b96">图片</a>  提示改动</li>
-<li>紧接着 ！<a target="_blank" rel="noopener" href="http://note.youdao.com/noteshare?id=0228cdc2f30f05bfc621b6fd78f13696">按照图片</a> ，改动，default includepath内部改动同第三条</li>
-<li>重启后即可配置成功</li>
-</ol>
-<h2 id="出现的include-lt-头文件-gt-出错"><a href="#出现的include-lt-头文件-gt-出错" class="headerlink" title="出现的include&lt;头文件&gt;出错"></a>出现的include&lt;头文件&gt;出错</h2><p>当出现<strong>检测到#include错误，请更新IncludePath</strong>这种报错时常用以下解决办法：</p>
-<ol>
-<li><p>启动命令命令提示符，键入<br><code>gcc -v -E -x c - </code>     <strong>注意空格！！</strong></p>
-</li>
-<li><p>获取mingw路径（四选一）</p>
-</li>
-<li><p>启动VSC，按  Shift+ctrl +p输入C++configurations，选择UI界面，打开后再包含路径处粘贴刚才的路径，退出重启VSC即可</p>
-</li>
-</ol>
-<h1 id="出现的汉字编译后为乱码现象"><a href="#出现的汉字编译后为乱码现象" class="headerlink" title="出现的汉字编译后为乱码现象"></a>出现的汉字编译后为乱码现象</h1><p>打开设置—-文本编辑器—-文件—-encoding，将其设置为gbk。</p>
-<p>​         </p>
-
-      
-
-      
-        <div class="page-reward">
-          <a href="javascript:;" class="page-reward-btn tooltip-top">
-            <div class="tooltip tooltip-east">
-            <span class="tooltip-item">
-              赏
-            </span>
-            <span class="tooltip-content">
-              <span class="tooltip-text">
-                <span class="tooltip-inner">
-                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
-                  <div class="reward-box">
-                    
-                    
-                  </div>
-                </span>
-              </span>
-            </span>
-          </div>
-          </a>
-        </div>
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术博客</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">LeetCode笔记</a>
         		</li>
       		
 		</ul>
 	</div>
 
-      
+          
 
-      
-
-      
-        
-<div class="share-btn share-icons tooltip-left">
-  <div class="tooltip tooltip-east">
-    <span class="tooltip-item">
-      <a href="javascript:;" class="share-sns share-outer">
-        <i class="icon icon-share"></i>
-      </a>
-    </span>
-    <span class="tooltip-content">
-      <div class="share-wrap">
-        <div class="share-icons">
-          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
-            <i class="icon icon-weibo"></i>
-          </a>
-          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
-            <i class="icon icon-weixin"></i>
-          </a>
-          <a class="qq share-sns" href="javascript:;" data-type="qq">
-            <i class="icon icon-qq"></i>
-          </a>
-          <a class="douban share-sns" href="javascript:;" data-type="douban">
-            <i class="icon icon-douban"></i>
-          </a>
-          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
-            <i class="icon icon-qzone"></i>
-          </a>
-          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
-            <i class="icon icon-facebook"></i>
-          </a>
-          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
-            <i class="icon icon-twitter"></i>
-          </a>
-          <a class="google share-sns" href="javascript:;" data-type="google">
-            <i class="icon icon-google"></i>
-          </a>
         </div>
-      </div>
-    </span>
-  </div>
-</div>
-
-<div class="page-modal wx-share js-wx-box">
-    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
-    <p>扫一扫，分享到微信</p>
-    <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/" alt="微信分享二维码">
-    </div>
-</div>
-
-<div class="mask js-mask"></div>
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
 </article>
-
-  
-<nav id="article-nav">
-  
-    <a href="/2021/02/01/leetcode%E5%88%B7%E9%A2%98%E7%AC%94%E8%AE%B001-%E4%B8%A4%E6%95%B0%E4%B9%8B%E5%92%8C/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          leetcode刷题笔记01.两数之和
-        
-      </div>
-    </a>
   
   
-    <a href="/2021/01/24/first-test/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">first_test</div>
-      <i class="icon-circle-right"></i>
-    </a>
-  
-</nav>
-
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-  
-  <div class="duoshuo">
-	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="VScode-C语言环境配置" data-title="VScode C语言环境配置" data-url="http://example.com/2021/01/25/VScode-C%E8%AF%AD%E8%A8%80%E7%8E%AF%E5%A2%83%E9%85%8D%E7%BD%AE/"></div>
-	<!-- 多说评论框 end -->
-	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-	<script type="text/javascript">
-	var duoshuoQuery = {short_name:"true"};
-	(function() {
-		var ds = document.createElement('script');
-		ds.type = 'text/javascript';ds.async = true;
-		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-		ds.charset = 'UTF-8';
-		(document.getElementsByTagName('head')[0] 
-		 || document.getElementsByTagName('body')[0]).appendChild(ds);
-	})();
-	</script>
-	<!-- 多说公共JS代码 end -->
-</div>
-
-  
-  
+    </div></section>
   
 
-  
-  <div id="SOHUCS" sid="VScode-C语言环境配置" ></div> 
-<script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
-<script type="text/javascript">
-    window.changyan.api.config({
-        appid: "true",
-        conf: "true"
-    });
-</script>
-</script>
-  
-
-  
-
-  
+    
 
 
           </div>
@@ -413,9 +224,9 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: true,
+		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: true,
 		toc_hide_index: true,
