@@ -152,6 +152,186 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-recycle" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/26/recycle/">回收站误删文件恢复</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/26/recycle/" class="archive-article-date">
+  	<time datetime="2021-02-26T13:02:38.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="回收站误删文件的恢复"><a href="#回收站误删文件的恢复" class="headerlink" title="回收站误删文件的恢复"></a>回收站误删文件的恢复</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>昨日清理回收站的暂时删除的文件，结果看串行误删了暂时存放的文件，苦于不会恢复，便查阅了一些装机有关的书籍，找到了恢复的方法。</p>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><ol>
+<li>Win+R 输入【regedit】</li>
+<li>依次点击【HKEY_LOCAL_MACHINE】-【SOFTWARE】-【Microsoft】-【Windows】-【CurrentVersion】-【Explorer】-【DeskTop】-【NameSpace】； </li>
+<li>右侧空白处右键点击【新建】，选择【项】</li>
+<li>将文件夹名字改成【**{645FFO40-5081-101B-9F08-00AA002F954E}**】</li>
+<li>鼠标右击【默认】选择【修改】，在数值数据中输入【回收站】，点击确定</li>
+<li>重启机器</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/26/recycle/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-VS2019" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2021/02/26/VS2019/">VS2019美化界面（更换背景+透明界面）</a>
+    </h1>
+  
+
+        
+        <a href="/2021/02/26/VS2019/" class="archive-article-date">
+  	<time datetime="2021-02-26T13:01:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-02-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="VS2019界面的美化（更改背景-透明界面）"><a href="#VS2019界面的美化（更改背景-透明界面）" class="headerlink" title="VS2019界面的美化（更改背景+透明界面）"></a>VS2019界面的美化（更改背景+透明界面）</h1><h2 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h2><p>作为生产力工具，界面的观感舒适对于提升工作效率和缓解疲惫十分重要。VS2019是一款功能强大的IDE，但相比于轻量级的VSC，VS显得过于臃肿。不过，VS集合了Microsoft的精华，更利于代码管理和编辑，继承了各类库，易于项目的开发。简单更改编辑界面，提升工作时愉悦感也是一种乐趣所在。</p>
+<h2 id="具体步骤"><a href="#具体步骤" class="headerlink" title="具体步骤"></a>具体步骤</h2><h3 id="插件的安装"><a href="#插件的安装" class="headerlink" title="插件的安装"></a>插件的安装</h3><ol>
+<li>color theme editor for visual studio</li>
+<li>ClaudiaIDE</li>
+<li>Viasfora</li>
+</ol>
+<h3 id="主题的编辑"><a href="#主题的编辑" class="headerlink" title="主题的编辑"></a>主题的编辑</h3><ol>
+<li>插件安装好重新进入VS界面，在install themes界面选择DARK主题</li>
+<li>点击<strong>Creat copy of theme</strong></li>
+<li>在刚复制出的主题旁点击<strong>edit theme</strong></li>
+<li>搜索<strong>TreeView</strong>，双击<strong>TreeView-&gt;Background</strong>,将赋值改为<strong>2A252526</strong></li>
+<li>将以下选项的赋值分别改为<strong>2A252526</strong></li>
+</ol>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">Solution Explorer</span><br><span class="line"></span><br><span class="line">TreeView -&gt; Background</span><br><span class="line"></span><br><span class="line">IDE and text editor</span><br><span class="line"></span><br><span class="line">Environment -&gt; Window</span><br><span class="line"></span><br><span class="line">Environment -&gt; EnvironmentBackground</span><br><span class="line"></span><br><span class="line">Environment -&gt; EnvironmentBackgroundGradientBegin</span><br><span class="line"></span><br><span class="line">Environment -&gt; EnvironmentBackgroundGradientEnd</span><br><span class="line"></span><br><span class="line">Environment -&gt; EnvironmentBackgroundGradientMiddle1</span><br><span class="line"></span><br><span class="line">Environment -&gt; EnvironmentBackgroundGradientMiddle2</span><br><span class="line"></span><br><span class="line">Window Title</span><br><span class="line"></span><br><span class="line">Environment -&gt; MainWindowActiveCaption</span><br><span class="line"></span><br><span class="line">Environment -&gt; MainWindowInactiveCaption</span><br><span class="line"></span><br><span class="line">Command Bar</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandShelfBackgroundGradientBegin</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandShelfBackgroundGradientEnd</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandShelfBackgroundGradientMiddle</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandShelfHighlightGradientBegin</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandShelfHighlightGradientEnd</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandShelfHighlightGradientMiddle</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandBarGradientBegin</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandBarGradientEnd</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandBarGradientMiddle</span><br><span class="line"></span><br><span class="line">Environment -&gt; CommandBarToolBarBorder</span><br></pre></td></tr></table></figure>
+
+
+<ol start="7">
+<li>Ctrl+S保存编辑好的主题，退出重新选择该主题。</li>
+</ol>
+<h3 id="背景的更改"><a href="#背景的更改" class="headerlink" title="背景的更改"></a>背景的更改</h3><ol>
+<li>【工具】-&gt;【选项】-&gt;【ClaudiaIDE】</li>
+<li>根据提示选择喜欢的背景图片</li>
+<li>选择【扩展到IDE】为True</li>
+<li>其他可设为默认</li>
+</ol>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">技术博客</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2021/02/26/VS2019/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-栈与队列" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
