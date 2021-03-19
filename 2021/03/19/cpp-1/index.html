@@ -6,17 +6,17 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://example.com">
-  <title>C++程序设计：怎样使用类和对象（1） | Nefelibata&#39;s blog</title>
+  <title>C++程序设计第三单元------使用类和对象 | Nefelibata&#39;s blog</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="C++程序设计第三单元——使用类和对象1.类对象的初始化初始化的方法有以下几种，主要是构造函数为主 在类定义中构造函数的函数体中对数据进行赋值1234567891011121314class Box&amp;#123;   public :   Box()   &amp;#123;       height&#x3D;10;       wide&#x3D;20;   &amp;#125;&amp;#125;int main(void)&amp;#123;">
+  <meta name="description" content="C++程序设计第三单元——使用类和对象2. 对象数组 定义对象数组和C语言中定义结构体数组是 一个道理 定义出来的对象数组a[5]中，a[0],a[1]…….分别为五个不同的对象，只不过有相同的数据类型 对象数组每个元素都是同类的对象  举例： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C++程序设计：怎样使用类和对象（1）">
-<meta property="og:url" content="http://example.com/2021/03/14/cpp/index.html">
+<meta property="og:title" content="C++程序设计第三单元------使用类和对象">
+<meta property="og:url" content="http://example.com/2021/03/19/cpp-1/index.html">
 <meta property="og:site_name" content="Nefelibata&#39;s blog">
-<meta property="og:description" content="C++程序设计第三单元——使用类和对象1.类对象的初始化初始化的方法有以下几种，主要是构造函数为主 在类定义中构造函数的函数体中对数据进行赋值1234567891011121314class Box&amp;#123;   public :   Box()   &amp;#123;       height&#x3D;10;       wide&#x3D;20;   &amp;#125;&amp;#125;int main(void)&amp;#123;">
+<meta property="og:description" content="C++程序设计第三单元——使用类和对象2. 对象数组 定义对象数组和C语言中定义结构体数组是 一个道理 定义出来的对象数组a[5]中，a[0],a[1]…….分别为五个不同的对象，只不过有相同的数据类型 对象数组每个元素都是同类的对象  举例： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-03-14T08:57:56.000Z">
-<meta property="article:modified_time" content="2021-03-14T09:00:25.810Z">
+<meta property="article:published_time" content="2021-03-19T00:50:27.000Z">
+<meta property="article:modified_time" content="2021-03-19T00:52:00.608Z">
 <meta property="article:author" content="Nefelibata.W">
 <meta property="article:tag" content="C++学习笔记">
 <meta name="twitter:card" content="summary">
@@ -153,57 +153,86 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-cpp" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-cpp-1" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      C++程序设计：怎样使用类和对象（1）
+      C++程序设计第三单元------使用类和对象
     </h1>
   
 
         
-        <a href="/2021/03/14/cpp/" class="archive-article-date">
-  	<time datetime="2021-03-14T08:57:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-14</time>
+        <a href="/2021/03/19/cpp-1/" class="archive-article-date">
+  	<time datetime="2021-03-19T00:50:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2021-03-19</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="C-程序设计第三单元——使用类和对象"><a href="#C-程序设计第三单元——使用类和对象" class="headerlink" title="C++程序设计第三单元——使用类和对象"></a>C++程序设计第三单元——使用类和对象</h1><h2 id="1-类对象的初始化"><a href="#1-类对象的初始化" class="headerlink" title="1.类对象的初始化"></a>1.类对象的初始化</h2><p><strong>初始化的方法有以下几种，主要是构造函数为主</strong></p>
-<h3 id="在类定义中构造函数的函数体中对数据进行赋值"><a href="#在类定义中构造函数的函数体中对数据进行赋值" class="headerlink" title="在类定义中构造函数的函数体中对数据进行赋值"></a>在类定义中构造函数的函数体中对数据进行赋值</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Box</span>&#123;</span></span><br><span class="line">   <span class="keyword">public</span> :</span><br><span class="line">   Box()</span><br><span class="line">   &#123;</span><br><span class="line">       height=<span class="number">10</span>;</span><br><span class="line">       wide=<span class="number">20</span>;</span><br><span class="line">   &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Box box1;</span><br><span class="line">    <span class="built_in">cout</span>&lt;&lt;box1,height;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><strong>注意</strong></p>
-<ol>
-<li>定义的构造函数名<strong>必须和类名相同</strong>，这个构造函数不返回值，也没有任何类型，只是对数据进行初始化</li>
-<li>在主函数<strong>定义一个对象</strong>的时候，<strong>自动执行</strong>该构造函数，当Box box1;时，自动执行box1.Box()</li>
-<li>构造函数<strong>不需要用户进行调用</strong>，如果用户代码中打出box1.Box(),是一种错误</li>
-<li>构造函数一般声明在public中</li>
-<li>不提倡在构造函数中加入除给数据赋值之外的操作</li>
-<li>类外定义构造函数时也需要加域限定符  </li>
-</ol>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Box::Box()</span><br></pre></td></tr></table></figure>
+        <h1 id="C-程序设计第三单元——使用类和对象"><a href="#C-程序设计第三单元——使用类和对象" class="headerlink" title="C++程序设计第三单元——使用类和对象"></a>C++程序设计第三单元——使用类和对象</h1><h2 id="2-对象数组"><a href="#2-对象数组" class="headerlink" title="2. 对象数组"></a>2. 对象数组</h2><ul>
+<li>定义对象数组和C语言中定义结构体数组是 一个道理</li>
+<li>定义出来的对象数组a[5]中，a[0],a[1]…….分别为五个不同的对象，只不过有相同的数据类型</li>
+<li>对象数组每个元素都是同类的对象</li>
+</ul>
+<p>举例：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">char</span> sex;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Student(<span class="keyword">int</span> num = <span class="number">3</span>, <span class="built_in">string</span> name = <span class="string">&quot;Kevin&quot;</span>, <span class="keyword">char</span> sex = <span class="string">&#x27;f&#x27;</span>) : num(num), name(name), sex(sex) &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student::show</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; name;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Student grade[<span class="number">2</span>] = &#123;</span><br><span class="line">        Student(),</span><br><span class="line">        Student(<span class="number">4</span>, <span class="string">&quot;mary&quot;</span>, <span class="string">&#x27;s&#x27;</span>)&#125;;</span><br><span class="line"></span><br><span class="line">    grade[<span class="number">0</span>].show();</span><br><span class="line">    grade[<span class="number">1</span>].show();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="3-对象指针"><a href="#3-对象指针" class="headerlink" title="3. 对象指针"></a>3. 对象指针</h2><ol>
+<li><p><strong>指向对象的指针</strong></p>
+<p>一个对象存储空间的起始地址就是对象的指针，定义一个指针变量用来存储对象的起始地址就是指向对象的指针</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">   XXX;<span class="comment">//数据成员</span></span><br><span class="line">   XXXXXX;<span class="comment">//成员函数</span></span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">   XXXXXX;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Time *pt,tim;</span><br><span class="line">pt=&amp;tim;</span><br><span class="line">pt-&gt;XXXX;</span><br><span class="line">tim.XXXX;</span><br><span class="line">(*pt).XXXX;</span><br></pre></td></tr></table></figure>
 
 
-<h3 id="用带有参数的构造函数为不同对象的数据初始化"><a href="#用带有参数的构造函数为不同对象的数据初始化" class="headerlink" title="用带有参数的构造函数为不同对象的数据初始化"></a>用带有参数的构造函数为不同对象的数据初始化</h3><figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">构造函数名 （类型1 形参1，类型2 形参2......）</span><br></pre></td></tr></table></figure>
-<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">类名 对象名（实参1，实参2......）</span><br></pre></td></tr></table></figure>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Box</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">  <span class="keyword">public</span>:</span><br><span class="line">  Box(<span class="keyword">int</span> ,<span class="keyword">int</span> ,<span class="keyword">int</span>)</span><br><span class="line">  <span class="keyword">private</span>:</span><br><span class="line">  <span class="keyword">int</span> heightl;</span><br><span class="line">  <span class="keyword">int</span> width;</span><br><span class="line">  <span class="keyword">int</span> length;</span><br><span class="line">&#125;;</span><br><span class="line">Box::Box(<span class="keyword">int</span> h,<span class="keyword">int</span> w,<span class="keyword">int</span> l)</span><br><span class="line">&#123;</span><br><span class="line">   height=h;</span><br><span class="line">   width=w;</span><br><span class="line">   length=l;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">   <span class="function">Box <span class="title">box1</span><span class="params">(<span class="number">12</span>,<span class="number">13</span>,<span class="number">14</span>)</span></span>;</span><br><span class="line">   <span class="function">Box <span class="title">box2</span><span class="params">(<span class="number">34</span> <span class="number">35</span> <span class="number">23</span>)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="在构造函数中使用参数初始化表对数据进行初始化"><a href="#在构造函数中使用参数初始化表对数据进行初始化" class="headerlink" title="在构造函数中使用参数初始化表对数据进行初始化"></a>在构造函数中使用参数初始化表对数据进行初始化</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Box</span>&#123;</span></span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">   Box(<span class="keyword">int</span> h,<span class="keyword">int</span> w,<span class="keyword">int</span> l):height(h),width(w),length(l)&#123;构造函数体&#125;</span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">  <span class="keyword">int</span> heightl;</span><br><span class="line">  <span class="keyword">int</span> width;</span><br><span class="line">  <span class="keyword">int</span> length;</span><br><span class="line">  &#125;;</span><br></pre></td></tr></table></figure>
-<h3 id="对构造函数进行重载"><a href="#对构造函数进行重载" class="headerlink" title="对构造函数进行重载"></a>对构造函数进行重载</h3><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Box</span>&#123;</span></span><br><span class="line">    <span class="keyword">public</span>:</span><br><span class="line">    Box();</span><br><span class="line">    Box(<span class="keyword">int</span> h,<span class="keyword">int</span> w,<span class="keyword">int</span> l):height(h),width(w),length(l)&#123;&#125;</span><br><span class="line">    <span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> heightl;</span><br><span class="line">    <span class="keyword">int</span> width;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span>&#123;</span><br><span class="line">    Box box1;</span><br><span class="line">    <span class="function">Box <span class="title">box2</span><span class="params">(<span class="number">12</span> ,<span class="number">13</span> ,<span class="number">14</span>)</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>注意：</p>
-<ol>
-<li>一个类中<strong>可以定义多个构造函数</strong>，具有相同的名字，但是参数个数或类型不相同</li>
-<li>默认构造函数：建立对象时<strong>不必给出实参</strong>的构造函数</li>
-<li>一个类中<strong>只能有一个默认构造函数</strong>，如果未定义默认构造函数，系统会自动提供一个函数体为空的构造函数</li>
-<li>对于每一个对象来说，建立对象时<strong>只能执行一个默认函数</strong></li>
+</li>
 </ol>
-<h3 id="构造函数可以使用默认参数"><a href="#构造函数可以使用默认参数" class="headerlink" title="构造函数可以使用默认参数"></a>构造函数可以使用默认参数</h3><p>注意：</p>
-<ol>
-<li>在声明构造函数时指定默认参数值有利于用户知道建立对时怎样使用默认参数</li>
-<li>在一个类中如果定义了全是默认参数的构造函数时，不能再定义重载构造函数以及无参构造函数，否则就会引起歧义导致编译错误（<strong>一个类中只能有一个默认构造函数</strong>）</li>
+<ul>
+<li>注意到，我们定义了一个指向类的指针，并且定义了一个类的对象，将对象的起始地址赋给指针变量</li>
+<li>上述三种调用函数的方法都是正确的。</li>
+<li>第二种调用方法是逻辑上调用，一和三是物理上调用</li>
+</ul>
+<p>2.<strong>指向数据成员的指针</strong></p>
+<ul>
+<li>每个类的对象都是有地址的，其每个数据成员也都是有相应地址的</li>
+<li>对象的数据成员分别存储，调用函数时共同调用</li>
+</ul>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> *pt;</span><br><span class="line">p1=&amp;tim.XXX;</span><br></pre></td></tr></table></figure>
+<p>在定义指向数据成员的指针时的格式</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">数据类型 <span class="emphasis">*指针名;</span></span><br></pre></td></tr></table></figure>
+<p>在对指针赋值时注意，指向的这个数据成员<strong>必须访问权限是public</strong></p>
+<ol start="3">
+<li><strong>指向函数成员的指针</strong></li>
 </ol>
+<ul>
+<li>先来看指向普通函数的指针的定义方法</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">返回值类型 （<span class="emphasis">*指针名）（参数表列）；</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>函数名就是函数的入口地址，接下来将函数地址赋给指针</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指针名=&amp;函数名；</span><br></pre></td></tr></table></figure>
+<ul>
+<li>接下来调用这个函数</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="emphasis">*指针名)（参数表列）;</span></span><br></pre></td></tr></table></figure>
+
+
+<ul>
+<li>接下来看指向类中成员函数的指针</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">返回值类型（类名：：<span class="emphasis">*指针名）（参数表列）；</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>将函数赋给指针</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指针名=&amp;类名：：函数名;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>调用类的成员函数</li>
+</ul>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(对象.<span class="emphasis">*指针名)（参数表列）;</span></span><br></pre></td></tr></table></figure>
+
+
 
       
 
@@ -294,7 +323,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/14/cpp/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://example.com/2021/03/19/cpp-1/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -308,18 +337,9 @@
   
 <nav id="article-nav">
   
-    <a href="/2021/03/19/cpp-1/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          C++程序设计第三单元------使用类和对象
-        
-      </div>
-    </a>
   
-  
-    <a href="/2021/03/07/tree2/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">第五章 树（二）</div>
+    <a href="/2021/03/14/cpp/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">C++程序设计：怎样使用类和对象（1）</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -347,7 +367,7 @@
   
   <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="cpp" data-title="C++程序设计：怎样使用类和对象（1）" data-url="http://example.com/2021/03/14/cpp/"></div>
+	<div class="ds-thread" data-thread-key="cpp-1" data-title="C++程序设计第三单元------使用类和对象" data-url="http://example.com/2021/03/19/cpp-1/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
@@ -369,7 +389,7 @@
   
 
   
-  <div id="SOHUCS" sid="cpp" ></div> 
+  <div id="SOHUCS" sid="cpp-1" ></div> 
 <script charset="utf-8" type="text/javascript" src="//changyan.sohu.com/upload/changyan.js" ></script>
 <script type="text/javascript">
     window.changyan.api.config({
