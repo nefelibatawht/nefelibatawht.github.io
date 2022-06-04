@@ -96,8 +96,7 @@
 
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 
-<!--时钟-->
-<!-- <br>
+
 <div style="position:absolute; bottom:120px ;left:auto; width:100%;height:50%">
 	<script type="text/javascript" src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
   	<div id="clock" style="font-family: 'Share Tech Mono', monospace;color: #ffffff;text-align: center;position: absolute;left: 50%;top: 50%;-webkit-transform: translate(50%, 50%);transform: translate(-50%, -50%);color: #4B8CE1;text-shadow: 0 0 20px #0aafe6, 0 0 20px rgba(10, 175, 230, 0);">
@@ -130,7 +129,7 @@
 			return (zero + num).slice(-digit);
 		}
 	</script>
-</div> -->
+</div> 
 
     </div>
     <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
@@ -220,68 +219,11 @@
 <p>​        C语言向我们提供了一种数据类型 <strong>：结构体（struct）</strong>。</p>
 <p><strong>自定义数据类型</strong></p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//结构体定义</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span><span class="comment">// 一种新的数据类型 struct student 类型</span></span><br><span class="line"><span class="keyword">int</span> height; <span class="comment">//存储身高（整形）</span></span><br><span class="line"><span class="keyword">double</span> weight;<span class="comment">//存储体重（双精度浮点）</span></span><br><span class="line"><span class="keyword">char</span> name[<span class="number">20</span>];<span class="comment">//存储字符（字符型）</span></span><br><span class="line"><span class="keyword">int</span> score；<span class="comment">//存储成绩（整形）</span></span><br><span class="line">&#125;student1;<span class="comment">//在结构体中定义的结构体类型的变量</span></span><br></pre></td></tr></table></figure>
-<p>​        <strong>struct student:</strong> struct是定义结构体必备的前缀。student 是结构体标签。 struct student就组成了一种自定义数据类型–<code>struct student 类</code> ,就好比 int、double、float ，是作为定义变量的数据类型。 </p>
-<p>​        <strong>{}内的变量：</strong>结构体就像个模板，能规定好里面填什么变量。 </p>
-<p>​        <strong>student1：</strong>定义 struct student 类型的变量 . </p>
-<p><strong>对比下面四张图，先了解如何使用自定义的数据类型</strong></p>
-<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20211010150801983.png" alt="image-20211010150801983"></p>
-<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20211010150918286.png" alt="image-20211010150918286"></p>
-<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20211010151229106.png" alt="image-20211010151229106"></p>
-<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20211010151350896.png" alt="image-20211010151350896"></p>
-<p><strong>typedef</strong> </p>
-<p>​        <strong>typedef</strong>这是一个重命名的关键字，作用就是<strong>取个别名</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//typedef + 数据类型 + 你想要重命名的英文</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">student</span>&#123;</span></span><br><span class="line"><span class="keyword">int</span> height;</span><br><span class="line"><span class="keyword">double</span> weight;</span><br><span class="line"><span class="keyword">char</span> name[<span class="number">20</span>];</span><br><span class="line"><span class="keyword">int</span> score;</span><br><span class="line">&#125;Stu;<span class="comment">//重命名后的数据类型</span></span><br></pre></td></tr></table></figure>
-<p>​        typedef 在这段代码中将 Stu 等效成了 <code>struct student ，而不是一个 struct student</code>类型的变量。 </p>
-<p>​        <strong>结构体变量的初始化</strong> </p>
-<p>​        结构体也是一种数据类型，从某种程度上说与int等类似，属于同级，所以定义变量的方式也是一样的。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">Stu</span> <span class="title">stu1</span>,<span class="title">stu2</span>;</span> <span class="comment">//这里定义了Stu类型的变量</span></span><br></pre></td></tr></table></figure>
-<p>​        <strong>结构体成员的赋值</strong> </p>
-<p>​        结构体成员的获取形式为：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">结构体变量名.成员名;</span><br></pre></td></tr></table></figure>
-<p>​        <strong>示例：</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Stu stu1;</span><br><span class="line">stu1.height = <span class="number">175</span>;</span><br><span class="line">stu1.name = &#x27;讲课的那个人&#x27;;</span><br><span class="line"><span class="comment">//数组名是常量，不可修改。数组名也是指向数组在内存中起始地址的指针，不能直接进行赋值操作。</span></span><br><span class="line">因此不能直接赋值，</span><br><span class="line">stu1.weight = <span class="number">100.0</span>;</span><br><span class="line"><span class="built_in">printf</span>(<span class="string">&quot;身高：%d,姓名：%s,体重：%lf\n&quot;</span>,stu1.height,stu1.name,stu1.weight);</span><br></pre></td></tr></table></figure>
-<p><strong>引入指针</strong></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">指向结构体类型的指针-&gt;成员属性</span><br></pre></td></tr></table></figure>
-<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20211010155107547.png" alt="image-20211010155107547"></p>
-<p>当在定义变量时，定义的是一个指向结构体的指针，如图，则可使用<code>-&gt;</code>来进行属性的获取</p>
-<p>综上，我们得到关系：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">Stu *stu1;</span><br><span class="line">stu-&gt;height=<span class="number">180</span>;</span><br><span class="line">(*stu).height=<span class="number">180</span>;</span><br><span class="line">--------------------</span><br><span class="line">Stu stu1;</span><br><span class="line">(&amp;stu1)-&gt;height=<span class="number">180</span>;</span><br><span class="line">以上表述都是一个意思</span><br></pre></td></tr></table></figure>
-
-
-<h2 id="链表（链式存储结构）"><a href="#链表（链式存储结构）" class="headerlink" title="链表（链式存储结构）"></a>链表（链式存储结构）</h2><h2 id="对比数组（线性表的顺序存储）"><a href="#对比数组（线性表的顺序存储）" class="headerlink" title="对比数组（线性表的顺序存储）"></a>对比数组（线性表的顺序存储）</h2><p>回忆：数组中相邻两个节点存储位置相邻，即连续分配的内存空间，如</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> <span class="built_in">array</span>[<span class="number">10</span>];</span><br></pre></td></tr></table></figure>
-<p>这个数组中 假设array[1]的存储空间叫1004，那么前驱array[0]和后继array[1]分别存在1000和1008位置</p>
-<h2 id="引出链式结构"><a href="#引出链式结构" class="headerlink" title="引出链式结构"></a>引出链式结构</h2><p>预先无法知道数组的大小，不能分配一块连续的内存。对于数组来说常进行访问数组元素和修改元素内容两种操作，进行增删等操作都相对复杂，耗时久。这里就需要引入链表。链表一个节点内包含数据域和指针域，分别存放这个节点的数据以及指向下一个节点的指针。<img src="https://img-blog.csdnimg.cn/56ffd07ab9e4406a9963e38ba85e09d6.jpg?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAd2VpeGluXzUzNzE3Njg4,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<p>出自数据结构教材上的图，按照内存空间排序来说，1003–1005–1006–1007的顺序进行存储，即对应数据来说是k1–k2–k3–k4–k5，但是明显看出他们的存储地址是不连续的，但是要让他们按照顺序连起来，就需要借助指针的作用。节点的基础结构如下：</p>
-<p><img src="C:\Users\Lenovo\AppData\Roaming\Typora\typora-user-images\image-20211214094453973.png" alt="image-20211214094453973"></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> datatype;</span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">link_node</span>&#123;</span></span><br><span class="line">      datatype info;</span><br><span class="line">      <span class="class"><span class="keyword">struct</span> <span class="title">link_node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;node;</span><br></pre></td></tr></table></figure>
-<h2 id="单链表的实现"><a href="#单链表的实现" class="headerlink" title="单链表的实现"></a>单链表的实现</h2><h3 id="单链表的创建"><a href="#单链表的创建" class="headerlink" title="单链表的创建"></a>单链表的创建</h3><p>这里我只说一下后插（尾插）</p>
-<p>一图胜千言，给大家找了张网上的图，简单明了让大家先明白原理</p>
-<p><img src="https://img-blog.csdn.net/20180926194847575?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQxMDI4OTg1/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70" alt="在这里插入图片描述"></p>
-<p>后插是先要建立一个空表，然后不断申请结点挂到空表的后面去。这里有两种形式—–含有头结点的和不含头结点的。</p>
-<p><strong>含有头结点的</strong> ，初始化空表后，头结点不存储数据，可以理解成标记（其实是为了减少对空的单链表插入新节点，删除节点成为空表等特殊情况处理时进行的必要判断，不带头结点的单链表，在进行插入、删除操作时，可能会涉及到链表头指针的修改；带头结点单链表，在进行插入、删除操作时，不需要改变链表头指针）</p>
-<p><strong>不含有头结点的</strong> ，第一个建立的结点就是首节点，或者可以把建立的新结点直接赋给首节点。</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//含有头指针的为尾插法建立链表</span></span><br><span class="line"><span class="function">node* <span class="title">CreatHead</span><span class="params">()</span></span>&#123;</span><br><span class="line">    node *head;<span class="comment">//创建头指针</span></span><br><span class="line">    head=(node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(node));</span><br><span class="line">    head-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">return</span> head;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">node* <span class="title">CreateList</span><span class="params">(node *L,<span class="keyword">int</span> n)</span><span class="comment">//尾插法,L是头结点</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    node *p,*s;</span><br><span class="line">    p=L;</span><br><span class="line">    <span class="keyword">while</span>(n--)</span><br><span class="line">    &#123;</span><br><span class="line">        s=(node*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(node));</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>,&amp;s-&gt;datatype);</span><br><span class="line">        p-&gt;next=s,p=s;<span class="comment">/*实现尾插*/</span></span><br><span class="line">    &#125;</span><br><span class="line">    p-&gt;next=<span class="literal">NULL</span>;<span class="comment">/*尾结点的指针域指向空*/</span></span><br><span class="line">    <span class="keyword">return</span> L;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h3 id="单链表插入"><a href="#单链表插入" class="headerlink" title="单链表插入"></a>单链表插入</h3><p>插入操作比较容易理解</p>
-<p><img src="https://img-blog.csdnimg.cn/a05b5b9a84ce489ab084169a5a3e14ab.jpg?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAd2VpeGluXzUzNzE3Njg4,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<p>主要就是核心的几个步骤</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">p-&gt;next=q-&gt;next;<span class="comment">//将p连入链表</span></span><br><span class="line">q-&gt;next=p;<span class="comment">//建立新连接</span></span><br></pre></td></tr></table></figure>
-<h3 id="单链表的删除"><a href="#单链表的删除" class="headerlink" title="单链表的删除"></a>单链表的删除</h3><p><img src="https://img-blog.csdnimg.cn/f806bd719432410f879208347189e837.jpg?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAd2VpeGluXzUzNzE3Njg4,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pre-&gt;next=q-&gt;next;<span class="comment">//相当于把要删的结点排除出去</span></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="来道习题"><a href="#来道习题" class="headerlink" title="来道习题"></a>来道习题</h2><p><img src="https://img-blog.csdnimg.cn/d3ad1880200d4e07bd7cda7dcfb706ad.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBAd2VpeGluXzUzNzE3Njg4,size_12,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="在这里插入图片描述"></p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">node</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">    <span class="keyword">char</span> info[<span class="number">20</span>];</span><br><span class="line">    <span class="keyword">int</span> no;</span><br><span class="line">    <span class="keyword">int</span> grade;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;;<span class="comment">//按照题目要求建立节点结构</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="function">struct node *<span class="title">creat</span><span class="params">(struct node * head, <span class="keyword">int</span> n)</span></span>;<span class="comment">//建立节点的函数</span></span><br><span class="line">    <span class="function">struct node *<span class="title">insert</span><span class="params">(struct node * head)</span></span>;<span class="comment">//插入节点的函数</span></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(struct node * head)</span></span>;<span class="comment">//打印</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">p</span>, *<span class="title">q</span>, *<span class="title">h</span>;</span><span class="comment">//定义三个节点类型指针</span></span><br><span class="line">    <span class="keyword">int</span> n;<span class="comment">//确定原来链表中有多少个节点</span></span><br><span class="line">    h = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;n);</span><br><span class="line">    h = creat(h, n);</span><br><span class="line">    h = insert(h);</span><br><span class="line">    print(h);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n&quot;</span>);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function">struct node *<span class="title">creat</span><span class="params">(struct node *head, <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">p</span>, *<span class="title">q</span>;</span></span><br><span class="line">    p = (struct node *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct node));</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s%d%d&quot;</span>, p-&gt;info, &amp;p-&gt;no, &amp;p-&gt;grade);<span class="comment">//注意，对于info这个输入不必取地址，因为数组的数组名就是数组的首地址，是指向数组第一个元素的指针</span></span><br><span class="line">    head = p;<span class="comment">//将新建出的结点赋给刚才定义为空的头结点</span></span><br><span class="line">    q = p;<span class="comment">//p要去做下一个节点，所以把q也赋为p，让他成为现在的p结点，也就是下一个新节点的前驱</span></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; n; i++)</span><br><span class="line">    &#123;</span><br><span class="line">        p = (struct node *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct node));<span class="comment">//p为新建的节点</span></span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%s%d%d&quot;</span>, p-&gt;info, &amp;p-&gt;no, &amp;p-&gt;grade);</span><br><span class="line">        p-&gt;next = <span class="literal">NULL</span>;<span class="comment">//p也相当于目前最后的节点，指针指向NULL</span></span><br><span class="line">        q-&gt;next = p;<span class="comment">//q是首节点，要和p连接，就需要让他的指针指向p</span></span><br><span class="line">        q = p;<span class="comment">//连接完成，但p要去做下一个节点，所以q要跟上，让他成为现在的p结点，也就是下一个新节点的前驱</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> head;<span class="comment">//这里返回的就是head为首结点，一串已经连接好的链表</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="function">struct node *<span class="title">insert</span><span class="params">(struct node *head)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">p</span>, *<span class="title">q</span>, *<span class="title">p3</span>;</span></span><br><span class="line">    p = head;</span><br><span class="line">    q = head;</span><br><span class="line">    p3 = (struct node *)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct node));<span class="comment">//创建要插入的结点</span></span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s%d%d&quot;</span>, p3-&gt;info, &amp;p3-&gt;no, &amp;p3-&gt;grade);</span><br><span class="line">    <span class="keyword">if</span> (head-&gt;grade &gt;= p3-&gt;grade)<span class="comment">//按照题目要求比较,这里是与首节点进行比较，写出新节点一旦打头的情况</span></span><br><span class="line">    &#123;</span><br><span class="line">        p3-&gt;next = head;</span><br><span class="line">        head = p3;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">    &#123;</span><br><span class="line">        <span class="keyword">while</span> (p != <span class="literal">NULL</span> &amp;&amp; p3-&gt;grade &gt; p-&gt;grade)<span class="comment">//注意这里双目运算符的含义</span></span><br><span class="line">        &#123;</span><br><span class="line">            q = p;</span><br><span class="line">            p = p-&gt;next;</span><br><span class="line">        &#125;</span><br><span class="line">        p3-&gt;next = p;<span class="comment">//具体的插入原理不再详述</span></span><br><span class="line">        q-&gt;next = p3;</span><br><span class="line">        <span class="keyword">return</span> head;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(struct node *head)</span><span class="comment">//打印即可</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">node</span> *<span class="title">p</span>;</span></span><br><span class="line">    <span class="keyword">for</span> (p = head; p != <span class="literal">NULL</span>; p = p-&gt;next)</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="built_in">printf</span>(<span class="string">&quot;%s:%d-&gt;&quot;</span>, p-&gt;info, p-&gt;no);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
+        
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -370,10 +312,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -508,10 +447,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -617,10 +553,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -720,10 +653,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -829,10 +759,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -978,10 +905,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -1065,10 +989,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -1168,10 +1089,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
@@ -1314,10 +1232,7 @@
       
 
 
-  <div class="declare" hidden="hidden"></div>
-
-
-
+      
       
     </div>
     <div class="article-info article-info-index">
