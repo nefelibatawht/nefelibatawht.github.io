@@ -52,6 +52,7 @@
 		</a>
 		<hgroup>
 		  <h1 class="header-author"><a href="/"></a></h1>
+          <h1>Nefelibata.W</h1>
 		</hgroup>
 		
 
@@ -219,6 +220,11 @@
 <h3 id="思路："><a href="#思路：" class="headerlink" title="思路："></a>思路：</h3><p>由题意可知，该函数返回值为一个结构体中的指针。l1和l2分别代表两个链表的头指针，carry代表的是涉及的加法进位，head和tail分别是头结点和尾结点。使用while进入循环，因为数据在链表中是逆序存储的，所以头结点代表的是加数的个位。int n1 = l1 ? l1-&gt;val : 0;   和   int n2 = l2 ? l2-&gt;val : 0;两个语句的意思是将n1和n2分别赋予两个加数的个位。根据这时候是否是输出链表的头结点。注意，因为结果是 顺序存储，而导入的两个链表是逆序存储 ，所以当输出链表不是头结点时，令<code>head=tail=malloc(sizeof(struct  ListNode))</code> 。</p>
 
       
+
+
+  <div class="declare" hidden="hidden"></div>
+
+
 
       
         <div class="page-reward">
