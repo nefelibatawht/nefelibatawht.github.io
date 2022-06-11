@@ -16,7 +16,7 @@
 <meta property="og:description" content="C++程序设计第三单元——使用类和对象2. 对象数组 定义对象数组和C语言中定义结构体数组是 一个道理 定义出来的对象数组a[5]中，a[0],a[1]…….分别为五个不同的对象，只不过有相同的数据类型 对象数组每个元素都是同类的对象  举例： 123456789101112131415161718192021222324252627282930#include &lt;iostream&gt;#">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-03-19T00:50:27.000Z">
-<meta property="article:modified_time" content="2021-03-19T00:52:00.608Z">
+<meta property="article:modified_time" content="2022-06-11T01:55:23.950Z">
 <meta property="article:author" content="Nefelibata.W">
 <meta property="article:tag" content="C++学习笔记">
 <meta name="twitter:card" content="summary">
@@ -226,13 +226,11 @@
 </ul>
 <p>举例：</p>
 <figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line"><span class="keyword">private</span>:</span><br><span class="line">    <span class="keyword">int</span> num;</span><br><span class="line">    <span class="built_in">string</span> name;</span><br><span class="line">    <span class="keyword">char</span> sex;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    Student(<span class="keyword">int</span> num = <span class="number">3</span>, <span class="built_in">string</span> name = <span class="string">&quot;Kevin&quot;</span>, <span class="keyword">char</span> sex = <span class="string">&#x27;f&#x27;</span>) : num(num), name(name), sex(sex) &#123;&#125;</span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">()</span></span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Student::show</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; name;</span><br><span class="line">    <span class="built_in">cout</span> &lt;&lt; num;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">void</span>)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    Student grade[<span class="number">2</span>] = &#123;</span><br><span class="line">        Student(),</span><br><span class="line">        Student(<span class="number">4</span>, <span class="string">&quot;mary&quot;</span>, <span class="string">&#x27;s&#x27;</span>)&#125;;</span><br><span class="line"></span><br><span class="line">    grade[<span class="number">0</span>].show();</span><br><span class="line">    grade[<span class="number">1</span>].show();</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
 <h2 id="3-对象指针"><a href="#3-对象指针" class="headerlink" title="3. 对象指针"></a>3. 对象指针</h2><ol>
 <li><p><strong>指向对象的指针</strong></p>
 <p>一个对象存储空间的起始地址就是对象的指针，定义一个指针变量用来存储对象的起始地址就是指向对象的指针</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">   XXX;<span class="comment">//数据成员</span></span><br><span class="line">   XXXXXX;<span class="comment">//成员函数</span></span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">   XXXXXX;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Time *pt,tim;</span><br><span class="line">pt=&amp;tim;</span><br><span class="line">pt-&gt;XXXX;</span><br><span class="line">tim.XXXX;</span><br><span class="line">(*pt).XXXX;</span><br></pre></td></tr></table></figure>
-
-
-</li>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Time</span></span></span><br><span class="line"><span class="class">&#123;</span></span><br><span class="line">   <span class="keyword">public</span>:</span><br><span class="line">   XXX;<span class="comment">//数据成员</span></span><br><span class="line">   XXXXXX;<span class="comment">//成员函数</span></span><br><span class="line">   <span class="keyword">private</span>:</span><br><span class="line">   XXXXXX;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">Time *pt,tim;</span><br><span class="line">pt=&amp;tim;</span><br><span class="line">pt-&gt;XXXX;</span><br><span class="line">tim.XXXX;</span><br><span class="line">(*pt).XXXX;</span><br></pre></td></tr></table></figure></li>
 </ol>
 <ul>
 <li>注意到，我们定义了一个指向类的指针，并且定义了一个类的对象，将对象的起始地址赋给指针变量</li>
@@ -263,8 +261,6 @@
 <li>接下来调用这个函数</li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(<span class="emphasis">*指针名)（参数表列）;</span></span><br></pre></td></tr></table></figure>
-
-
 <ul>
 <li>接下来看指向类中成员函数的指针</li>
 </ul>
@@ -277,9 +273,6 @@
 <li>调用类的成员函数</li>
 </ul>
 <figure class="highlight markdown"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(对象.<span class="emphasis">*指针名)（参数表列）;</span></span><br></pre></td></tr></table></figure>
-
-
-
       
       
       
